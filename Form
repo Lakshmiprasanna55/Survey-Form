@@ -1,0 +1,143 @@
+##Html code
+****************************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="surveyForm.css">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out the following survey form.</p>
+
+    <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input id="name" type="text" name="name" placeholder="Enter your name" required>
+        
+        <label id="email-label" for="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" required>
+        
+        <label id="number-label" for="number">Age:</label>
+        <input id="number" type="number" name="age" min="10" max="100" placeholder="Enter your age" required>
+        
+        <label for="dropdown">Favorite Programming Language:</label>
+        <select id="dropdown" name="language" required>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+        </select>
+        
+        <fieldset>
+            <legend>Preferred Contact Method:</legend>
+            <label>
+                <input type="radio" name="contact" value="email" required> Email
+            </label>
+            <label>
+                <input type="radio" name="contact" value="phone"> Phone
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Interests:</legend>
+            <label>
+                <input type="checkbox" name="interests" value="coding"> Coding
+            </label>
+            <label>
+                <input type="checkbox" name="interests" value="reading"> Reading
+            </label>
+            <label>
+                <input type="checkbox" name="interests" value="traveling"> Traveling
+            </label>
+        </fieldset>
+        
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="2" placeholder="Enter your comments here"></textarea>
+        
+        <button id="submit" type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+*********************************************************************************************************************
+
+##CSS Code
+**********
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0px;
+}
+
+#title {
+    text-align: center;
+    color: #333;
+}
+
+#description {
+    text-align: center;
+    color: #666;
+}
+
+#survey-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
